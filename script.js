@@ -1,5 +1,19 @@
+const numeroTela = document.querySelector(".number")
+const addNum = document.querySelector(".btn.add")
+const removeNum = document.querySelector(".btn.remove")
 
-const input = document.querySelector(".input")
+let numeroAdicionado = 0
 
-const numbers = document.querySelector(".numbers")
+addNum.addEventListener("click",()=>{
+    numeroAdicionado++
+    numeroTela.innerHTML = numeroAdicionado
+})
+removeNum.addEventListener("click",()=>{
+    
+    if(numeroTela.textContent == 0){
+        return
+    }
 
+    numeroAdicionado--
+    numeroTela.innerHTML = numeroAdicionado
+})
